@@ -14,13 +14,15 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-		<link rel="stylesheet" href="dist/index.css">
+		<link rel="stylesheet" href="./dist/reset.css">
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="./dist/index.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js" defer></script>
+		<script src="./main.js" defer></script>
 	</head>
 
 	<body>
@@ -31,6 +33,7 @@
 					<h1>中間発表</h1>
 					<p>2T8 49番 八尋諒</p>
 				</section>
+
 				<section data-auto-animate>
 					<section data-auto-animate>
 						<h1>メンバー紹介</h1>
@@ -48,6 +51,7 @@
 						</div>
 					</section>
 				</section>
+
 				<section data-auto-animate>
 					<section data-auto-animate>
 						<h1>作品概要</h1>
@@ -67,6 +71,7 @@
 						<img src="./public/244e82bb-9504-44a8-8127-c82f171d6de1.png" alt="">
 					</section>
 				</section>
+
 				<section data-auto-animate>
 					<section data-auto-animate>
 						<h1>進捗</h1>
@@ -78,6 +83,7 @@
 							<li>設計考えた</li>
 							<li>使用言語を考えた</li>
 							<li>パッケージ構成考えた</li>
+							<li>3Dモデルをクルクル</li>
 						</ul>
 					</section>
 					<section data-auto-animate>
@@ -90,18 +96,94 @@
 					</section>
 					<section data-auto-animate>
 						<h1>設計考えた</h1>
-						<p></p>
+						<p>このアプリケーションは、<br/>小学生向けのためインストールのような難しい操作を省きたい。</p>
+						<p>なので、Webで動かすという前提で設計を行う</p>
 					</section>
-				</section>	
+					<section data-auto-animate>
+						<h1>設計考えた</h1>
+						<p>そこで、ネックになるのはビジュアルプログラム言語のコンパイル部分</p>
+						<p>これを解決するために、WebAssemblyを使用する。</p>
+					</section>
+					<section data-auto-animate>
+						<h1>設計考えた</h1>
+						<p>WebAssemblyにコンパイルする前の言語はRustを使用する</p>
+					</section>
+					<section data-auto-animate>
+						<h1>設計考えた</h1>
+						<p>次に、3Dの描画部分がネック</p>
+						<p>如何に軽く早い、3Dの描画ができるかが重要</p>
+						<p>必要なjsのライブラリを選定する</p>
+					</section>
+					<section data-auto-animate>
+						<h1>設計考えた</h1>
+						<p>やっぱThree.jsだろ！！</p>
+					</section>
+					<section data-auto-animate>
+						<h1>設計考えた</h1>
+						<p>あとは、Web開発を行うためのフレームワークとして、Reactを使用</p>
+					</section>
+
+					<section data-auto-animate>
+						<h1>使用言語・ライブラリ</h1>
+					</section>
+					<section data-auto-animate>
+						<h1>使用言語・ライブラリ</h1>
+						<ul>
+							<li>HTML</li>
+							<li>CSS / SCSS</li>
+							<li>JavaScript / TypeScript</li>
+							<li>React.js / Next.js</li>
+							<li>Three.js / React-three-fiber</li>
+							<li>Rust</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h1>パッケージ構成</h1>
+					</section>
+					<section data-auto-animate>
+						<h1>パッケージ構成</h1>
+						<p>今後大規模なアプリケーションの作成が見込まれるため、Atomic Designを</p>
+						<p>Rust、Next.jsで使用する</p>
+					</section>
+
+					<section data-auto-animate>
+						<h1>3Dモデルをクルクル</h1>
+					</section>
+					<section data-auto-animate>
+						<h1>3Dモデルをクルクル</h1>
+						<p>こんなことできたよ！</p>
+						<video class="iiii" src="./public/Fh9zfeXVsAIoFAw.mp4" controls></video>	
+					</section>
+				</section>
+
+				<section data-auto-animate>
+					<section data-auto-animate>
+						<h1>今後の課題</h1>
+					</section>
+					<section data-auto-animate>
+						<h1>今後の課題</h1>
+						<p>とりあえず、MVPで作ろうと思います。</p>
+						<p>時間欲しい、空き時間で実装を行う</p>
+					</section>
+				</section>
+
+				<section data-auto-animate>
+					<section data-auto-animate>
+						<h1>ご清聴ありがとうございました</h1>
+						<p>クルクル〜</p>
+						<div id="three"></div>
+					</section>
+				</section>
 			</div>
 		</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/zoom/zoom.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/search/search.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		<script src="./dist/reveal.js"></script>
+		<script src="./plugin/zoom/zoom.js"></script>
+		<script src="./plugin/notes/notes.js"></script>
+		<script src="./plugin/search/search.js"></script>
+		<script src="./plugin/markdown/markdown.js"></script>
+		<script src="./plugin/highlight/highlight.js"></script>
 		<script>
 
 			// Also available as an ES module, see:
